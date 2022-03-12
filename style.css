@@ -1,0 +1,49 @@
+#top-bar{
+    grid-area: top-bar;
+    background-color: tomato;
+    border: 2px solid black;
+}
+#side-bar{
+    grid-area: side-bar;
+    background-color: blue;
+    border: 2px solid black;
+}
+#Main-bar{
+    grid-area: Main-bar;
+    background-color: aqua;
+    border: 2px solid black;
+}
+#left-m-bar{
+    grid-area: left-m-bar;
+    background-color: blueviolet;
+    border: 2px solid black;
+}
+#right-m-bar{
+    grid-area: right-m-bar;
+    background-color: brown;
+    border: 2px solid black;
+}
+#footer-bar{
+    grid-area: footer-bar;
+    background-color: yellow;
+    border: 2px solid black;
+    
+}
+#container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1fr 1fr 0.3fr;
+    height: 100vh;
+    border: 2px solid black;
+    grid-template-areas: "top-bar top-bar top-bar top-bar" "side-bar Main-bar Main-bar Main-bar" "side-bar left-m-bar right-m-bar right-m-bar" "footer-bar footer-bar footer-bar footer-bar";
+}
+
+@media only screen and (max-width:550px){
+    #container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.3fr 0.3fr 0.3fr 0.3fr 0.3fr 0.3fr;  
+        grid-template-areas: "top-bar" "side-bar" "Main-bar" "left-m-bar" "right-m-bar" "footer-bar";
+        height: 100vh;
+    }
+}
